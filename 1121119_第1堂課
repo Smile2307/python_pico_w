@@ -1,0 +1,211 @@
+# 第1堂課Python環境建置及基本文法
+
+2023/11/19
+
+{%hackmd CW_VgU4lSvWeiVKQl3Rr6w %}
+
+## <span class="activity-tag">一、每次上課必須開啟之網頁
+
+- Google Meet 連結：
+https://meet.google.com/rgg-rywi-hbw
+即時錄影連結
+https://www.youtube.com/watch?v=d4kCf4p2T6E
+
+- 歷史影片
+[1121119上午](https://youtube.com/live/d4kCf4p2T6E)
+[1121119下午](https://youtube.com/live/pVvPs_qJhNY)
+
+
+- 老師(徐國堂)的Github儲存庫
+https://github.com/roberthsu2003/
+
+- smile的Github儲存庫
+https://github.com/Smile2307/python_pico_w
+
+- 微笑的Github虛擬電腦
+https://expert-space-guacamole-7jxp4vp4x492x97w.github.dev/
+    
+- [Python標準函式函式庫](https://docs.python.org/3.10/library/index.html)
+
+
+- 學習架構
+    使用工具，如ChatGPT、說明檔(python...)
+![圖](https://hackmd.io/_uploads/BywNrB_NT.png)
+
+    
+## <span class="activity-tag">二、安裝環境
+
+### 1、申請Github
+- 搜尋github
+    ![圖片](https://hackmd.io/_uploads/HJetkKdN6.png)
+
+- 申請Github帳號
+    ![圖](https://hackmd.io/_uploads/SJV4etONT.png)
+
+    ![圖](https://hackmd.io/_uploads/SyKp-K_4T.png)
+    
+    點擊左側免費按鈕
+    ![圖](https://hackmd.io/_uploads/SkMlmtdEa.png)
+### 2、[連結老師的Github的儲存庫](https://github.com/roberthsu2003/)
+
+
+- [訂閱老師的python講義](https://github.com/roberthsu2003/python)
+    進入repo(儲存庫)後，點選右側的開始按鈕(訂閱)
+    ![圖](https://hackmd.io/_uploads/r1NJtYu4p.png)
+
+-自己的repod的開始出現訂閱數(2)
+    ![圖片](https://hackmd.io/_uploads/rkPoYt_Va.png)
+
+- 建立repo的資料夾(公開的)
+    點選“+”或新建按鈕，新增一個資料夾
+    ![圖](https://hackmd.io/_uploads/r1j6G5uET.png)
+* 設定repo的名稱
+* 勾選公共
+* 勾選新增自述文件
+* 最後，點按Createrepository，完成
+    ![圖](https://hackmd.io/_uploads/ByPd79u4a.png)
+
+### 3、建立虛擬linux主機
+
+![圖](https://hackmd.io/_uploads/Bk5rOcOE6.png)
+
+- 點選Code/Codespaces/Create codespace on main
+![圖](https://hackmd.io/_uploads/rJ1r6cuVT.png)
+
+- 建立完成
+![圖](https://hackmd.io/_uploads/SkdiA5OVT.png)
+ 
+- 建立主機的環境清單(devcontainer)
+    點選左下角 Codespaces：好學的巴鬆管
+![圖片](https://hackmd.io/_uploads/SyJj-iuE6.png)
+    
+    點擊新增開發容器設定檔.../建立新配置
+    
+    篩選python/開發Python3應用程式/3.10-bullsyey
+    ![圖](https://hackmd.io/_uploads/Hk7XOhuNa.png)
+
+    勾選下圖的項目
+    ![圖](https://hackmd.io/_uploads/S1mdK2uVp.png)
+
+    篩選git
+    ![圖](https://hackmd.io/_uploads/BkJS93ONp.png)
+
+    點選保留預設值
+    ![圖片](https://hackmd.io/_uploads/Skexa2OE6.png)
+
+    建立環境清單
+    ![圖片](https://hackmd.io/_uploads/HyYwphdVT.png)
+
+    建置環境，完成
+    點選左下角 Codespaces: Studious bassoon/Rebuild Container
+    ![圖片](https://hackmd.io/_uploads/rJAlChOE6.png)
+
+    查詢python的版本
+    ![圖](https://hackmd.io/_uploads/BygMyTuNp.png)
+
+### 4、建立檔案
+    點選 README.md 下方的空白處/右上角的新增檔案符號/檔名.py
+    .py檔為python的專案檔
+![螢幕截圖截圖2023-11-19 112248](https://hackmd.io/_uploads/SyTn1WPN6.png)
+
+
+
+### 5、安裝補充套件jupyter notebook
+![圖](https://hackmd.io/_uploads/HJVbG-wE6.png)
+
+    點選左方的選擇增強套件/jupyter/第1個
+![圖](https://hackmd.io/_uploads/H1phQpuN6.png)
+    
+    建立檔案less1_2.ipynb
+    .ipynb檔主要用於學習及測試python
+![圖](https://hackmd.io/_uploads/HJRjNTdVp.png)
+
+    指定python的版本
+    點選右方的一些核心/Python環境/python 3.10.13 ...
+![圖片](https://hackmd.io/_uploads/ByunS6OVT.png)
+
+
+### 6、全體同步CodeSpaces與github repo
+
+    回購協議的名稱
+![圖](https://hackmd.io/_uploads/rk2BqpONa.png)
+
+    
+點選左方 源始檔控制/提交
+![螢幕截圖截圖 2023-11-19 114752](https://hackmd.io/_uploads/HkJtrZDNp.png)
+
+   選擇始終
+![圖片](https://hackmd.io/_uploads/BJqz_pO4p.png)
+
+   點選同步變更 1 / 確定，不再顯示
+![圖](https://hackmd.io/_uploads/SkF0_6u46.png)
+
+    點按 是
+![圖片](https://hackmd.io/_uploads/HJpPFTOEa.png)
+    
+    同步後的repo
+![圖](https://hackmd.io/_uploads/S1555a_Vp.png)
+    
+
+
+## <span class="activity-tag">三、python基本語法
+
+
+    
+### 1、python純值
+
+![圖](https://hackmd.io/_uploads/Sy5yDCdN6.png)
+![圖片](https://hackmd.io/_uploads/B18dwRdN6.png)
+
+：：：警告
+課程碼
+![圖](https://hackmd.io/_uploads/SyMtrXDVp.png)
+
+:::
+    
+### 2、2次攻擊元
+    
+![圖](https://hackmd.io/_uploads/ryfZ90_4T.png)
+
+：：：警告
+課程碼
+![螢幕截圖截圖 2023-11-19 142229](https://hackmd.io/_uploads/Sk815QwNa.png)
+![圖](https://hackmd.io/_uploads/HJOM9QwNT.png)
+![圖](https://hackmd.io/_uploads/HJnBSytEp.png)
+![圖](https://hackmd.io/_uploads/HkzOUyYEa.png)
+:::
+
+### 3、變數（記憶體的程式區塊數）
+    
+![圖](https://hackmd.io/_uploads/HygT-VvET.png)
+![圖片](https://hackmd.io/_uploads/SJ_yf4PE6.png)
+
+![圖](https://hackmd.io/_uploads/Hy0eU1Y4a.png)
+![圖](https://hackmd.io/_uploads/Hk1vvkYVT.png)
+
+
+   
+    
+### 4、輸入、輸出(整理)
+    
+![圖](https://hackmd.io/_uploads/HyGFtyK4p.png)
+
+[Python標準函式函式庫](https://docs.python.org/3.10/library/index.html)
+    
+![圖片](https://hackmd.io/_uploads/SJq6L1YEp.png)
+![圖](https://hackmd.io/_uploads/Sk7kiytNT.png)
+![圖](https://hackmd.io/_uploads/Sy7iskKNp.png)
+![圖](https://hackmd.io/_uploads/rJTOCkYN6.png)
+
+    
+###### 參考資料
+> <字體大小=2>https://github.com/roberthsu2003/
+    https://meet.google.com/rgg-rywi-hbw
+    https://docs.python.org/3.10/library/index.html
+    https://youtube.com/live/d4kCf4p2T6E
+    https://youtube.com/live/pVvPs_qJhNY
+    
+    
+</font>
+
+###### 標籤： `Python` `Pico`
