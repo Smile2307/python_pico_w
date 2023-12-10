@@ -13,16 +13,25 @@
 # Author : sosorry
 # Date   : 06/22/2014
 
-import RPi.GPIO as GPIO    
+#import RPi.GPIO as GPIO
+from machine import Pin
 import time				
 
-GPIO.setmode(GPIO.BOARD)  
-LED_PIN = 12		
-GPIO.setup(LED_PIN, GPIO.OUT)    
+while True:
+#GPIO.setmode(GPIO.BOARD)
+    led = Pin("LED",Pin.OUT)
+#LED_PIN = 12		
+#GPIO.setup(LED_PIN, GPIO.OUT)    
 
-print("LED is on")
-GPIO.output(LED_PIN, GPIO.HIGH)    
-time.sleep(3)
+    print("LED is on")
+#GPIO.output(LED_PIN, GPIO.HIGH)
+    led.value(1)
+    time.sleep(3)
 
-GPIO.cleanup()   
+    print("LED is off")
+#GPIO.output(LED_PIN, GPIO.HIGH)
+    led.value(0)
+    time.sleep(3)
+
+#GPIO.cleanup()   
 
