@@ -5,7 +5,7 @@ from machine import Pin
 import rp2
 
 # Configure the number of WS2812 LEDs.
-NUM_LEDS = 16
+NUM_LEDS = 12
 PIN_NUM = 6
 brightness = 0.2
 

@@ -1,12 +1,13 @@
-import time, _thread, machine
+import time, _thread
+from machine import Pin
 
 def task(n, delay):
-    led = machine.Pin("LED", machine.Pin.OUT)
+    led = Pin("LED", Pin.OUT)
     for i in range(n):
-        led.high()
+        led.on()
         time.sleep(delay)
-        led.low()
+        led.off()
         time.sleep(delay)
     print('done')
 
-_thread.start_new_thread(task, (10, 0.5))
+_thread.start_new_thread(task, (10, 3))
