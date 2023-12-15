@@ -10,5 +10,5 @@ while True:
     # The temperature sensor measures the Vbe voltage of a biased bipolar diode, connected to the fifth ADC channel
     # Typically, Vbe = 0.706V at 27 degrees C, with a slope of -1.721mV (0.001721) per degree. 
     temperature = 27 - (reading - 0.706)/0.001721
-    print(temperature)
+    print(f"溫度: {temperature:.2f}")
     utime.sleep(2)
