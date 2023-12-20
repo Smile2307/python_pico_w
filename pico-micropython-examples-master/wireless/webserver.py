@@ -6,11 +6,16 @@ from machine import Pin
 
 led = Pin(15, Pin.OUT)
 
-ssid = 'YOUR NETWORK NAME'
-password = 'YOUR NETWORK PASSWORD'
+#ssid = 'YOUR NETWORK NAME'
+#password = 'YOUR NETWORK PASSWORD'
+#ssid = 'Robert_iPhone'
+#password = '0926656000'
+ssid = 'Smilewireless'
+password = '0939763309'
 
 wlan = network.WLAN(network.STA_IF)
 wlan.active(True)
+#wlan.disconnect()
 wlan.connect(ssid, password)
 
 html = """<!DOCTYPE html>
