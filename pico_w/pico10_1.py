@@ -8,10 +8,11 @@ def alert():
 
 def callback1(t):
     global start	#建立外變數
-    sensor =ADC(4)
+    sensor =ADC(4)	#ADC的第4個channel，pio26(0)、27(1)、28(2)、29(3,參考電壓用)、Temperture sensor(4,無腳位顯示)
+    #sensor.read_u16():12進位轉16作位
     vol = sensor.read_u16() *(3.3 / 65535)
     temperature = 27 - (vol-0.706) / 0.001721
-    print(f"溫度:{temperature}")
+    print(f"溫度:{temperature:.2f}")
     
     delta = time.ticks_diff(time.ticks_ms(), start) # compute time difference
     print(delta)
@@ -20,7 +21,7 @@ def callback1(t):
         alert()
         #重新計時
         start = time.ticks_ms()
-start = time.ticks_ms() - 60 *1000	#第1次發生時即可發alter
+start = time.ticks_ms() - 60 *1000	#第1次發生時即可執行alter
 
 time1 = Timer()
 time1.init(freq=1,callback=callback1) 
