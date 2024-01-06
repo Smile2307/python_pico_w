@@ -5,10 +5,10 @@ from network import WLAN,STA_IF
 # Network Setup
 #ssid = '<ssid>'
 #password = '<password>'
-#ssid = 'Robert_iPhone'
-#password = '0926656000'
-ssid = 'Smilewireless'
-password = '0939763309'
+ssid = 'Smile_S23'
+password = '0939763309b'
+#ssid = 'Smilewireless'
+#password = '0939763309'
 wlan = WLAN(STA_IF)
 wlan.active(True)
 print('Connecting...')
