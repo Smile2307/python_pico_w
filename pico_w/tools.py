@@ -1,16 +1,18 @@
 import network
-import urequests as requests
 import time
 import rp2
 from machine import WDT
 
 rp2.country('TW')
 
+#ssid = 'Smile_S23'
+#password = '0939763309b' 
 
-ssid = 'Robert_iPhone'
-password = '0926656000'
+ssid = 'Smilewireless'
+password = '0939763309'
 
-
+#ssid = 'robertHome'
+#password = '0926656000'
 
 wlan = network.WLAN(network.STA_IF)
 wlan.active(True)
@@ -36,9 +38,9 @@ def connect():
     #處理錯誤
     if wlan.status() != 3:
         print('連線失敗,重新開機')
-        #raise RuntimeError('連線失敗')
-        wdt = WDT(timeout=2000)
-        wdt.feed()
+        raise RuntimeError('連線失敗')
+        #wdt = WDT(timeout=2000)
+        #wdt.feed()
     else:
         print('連線成功')
         status = wlan.ifconfig()
@@ -53,4 +55,4 @@ def reconnect():
         print("嘗試重新連線")
         wlan.disconnect()
         wlan.connect(ssid, password)
-        connect()
+        connect()          

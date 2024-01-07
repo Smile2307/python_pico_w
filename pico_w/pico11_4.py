@@ -1,9 +1,10 @@
+import urequests as requests
 from tools import connect,reconnect
 from machine import WDT,Timer,ADC,RTC
 import time
 
 
-def alert(t:float):
+def alert(temp:float):
     print('要爆炸了!')
     rtc = RTC()
     date_tuple = rtc.datetime()
@@ -14,8 +15,9 @@ def alert(t:float):
     minites = date_tuple[5]
     second = date_tuple[6]
     date_str = f'{year}-{month}-{day} {hour}:{minites}:{second}'
+    get_url = f'https://hook.us1.make.com/9uqpnfcc8z03v2nqxo2wmmb8n85lj04s?name=Pico的溫度&date={date_str}&temp={temp:.2f}'
     try:
-        response = requests.get('https://hook.us1.make.com/lwylhnsajcmk7kfpnog7kmb8l25894u7?name=robert&date=%E4%BB%8A%E5%A4%A9&temperature=56.987')
+        response = requests.get(get_url)
     except:
         reconnect()
     else:
@@ -34,7 +36,7 @@ def callback1(t:Timer):
     temperature = 27 - (vol-0.706) / 0.001721
     print(f'溫度:{temperature}')    
     delta = time.ticks_diff(time.ticks_ms(), start)
-    print(delta)
+    #print(delta)
     #溫度超過24度,並且發送alert()的時間已經大於60秒
     if temperature >= 24 and delta >= 60 * 1000:        
         alert(temperature)

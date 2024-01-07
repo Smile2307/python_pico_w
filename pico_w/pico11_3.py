@@ -1,6 +1,6 @@
 import network
 import time
-from machine import WDT,Timer,ADC,RTC
+from machine import WDT,Timer,ADC
 import urequests as requests
 
 
@@ -34,32 +34,15 @@ def connect():
         print("成功連線")
         print(nic.ifconfig())
         
-def reconnect():
-    
 
 
-#設定參數t為float
-def alert(t:float):
+
+
+def alert():
     print('要爆炸了!')
-    #取得時間
-    rtc=RTC()
-    date_tuple=rtc.datetime()
-    year=date_tuple[0]
-    month=date_tuple[1]
-    day=date_tuple[2]
-    hour=date_tuple[4]
-    minites=date_tuple[5]
-    second=date_tuple[6]
-    date_str=f'{year}-{month}-{day} {hour}:{minites}:{second}'
-    try:
-        response = requests.get(f'https://hook.us1.make.com/9uqpnfcc8z03v2nqxo2wmmb8n85lj04s?name=pico&date={date_str}&temp={t}')
-    
-        #print(help(response))
-    except:
-        reconnect()
-    else:
-        if response.status_code
-        response.close()
+    response = requests.get('https://hook.us1.make.com/9uqpnfcc8z03v2nqxo2wmmb8n85lj04s?name=pico&date=2024-01-06-14:33&temp=25.83')
+    print(help(response))
+    response.close()
     
 def callback1(t:Timer):
     global start
@@ -70,9 +53,8 @@ def callback1(t:Timer):
     delta = time.ticks_diff(time.ticks_ms(), start)
     print(delta)
     #溫度超過24度,並且發送alert()的時間已經大於60秒
-    if temperature >= 24 and delta >= 60 * 1000:
-        #給參數值
-        alert(temperature)
+    if temperature >= 24 and delta >= 60 * 1000:        
+        alert()
         start = time.ticks_ms()#重新設定計時的時間
         
 
