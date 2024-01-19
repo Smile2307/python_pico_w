@@ -3,7 +3,6 @@ from tools import connect,reconnect
 from machine import WDT,Timer,ADC,RTC
 import time
 
-
 def alert(temp:float):
     print('要爆炸了!')
     rtc = RTC()
@@ -14,6 +13,7 @@ def alert(temp:float):
     hour = date_tuple[4]
     minites = date_tuple[5]
     second = date_tuple[6]
+    #print(type(year))
     date_str = f'{year}-{month}-{day} {hour}:{minites}:{second}'
     get_url = f'https://hook.us1.make.com/9uqpnfcc8z03v2nqxo2wmmb8n85lj04s?name=Pico的溫度&date={date_str}&temp={temp:.2f}'
     try:

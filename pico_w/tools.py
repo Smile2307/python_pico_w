@@ -5,7 +5,7 @@ from machine import WDT
 
 rp2.country('TW')
 
-#ssid = 'Smile_S23'
+#ssid = 'Smile309'
 #password = '0939763309b' 
 
 ssid = 'Smilewireless'
@@ -39,6 +39,7 @@ def connect():
     if wlan.status() != 3:
         print('連線失敗,重新開機')
         raise RuntimeError('連線失敗')
+        #實際商品化後，須重新開機時，才使用
         #wdt = WDT(timeout=2000)
         #wdt.feed()
     else:
