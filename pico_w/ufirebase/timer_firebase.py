@@ -4,8 +4,10 @@ import os as MOD_OS
 import network as MOD_NETWORK
 import time as MOD_TIME
 
-ssid = 'Smilewireless' #Your network name
-password = '0939763309' #Your WiFi password
+#ssid = 'Smilewireless' #Your network name
+#password = '0939763309' #Your WiFi password
+ssid = 'smile309' #Your network name
+password = '0939763309b' #Your WiFi password
 
 # 拆解firebase的資料內容
 def myparser(Tdata,sp,star=0,mystep=1):
@@ -35,9 +37,9 @@ firebase.setURL(firebase_url)
 #Put Tag1
 #firebase.put("testtag", "1234", bg=0)
 #temp_C=18.4
-firebase.put("Esp32_timer/humi", 78, id=0, bg=0)
+firebase.put("Esp32_timer/humi", 60, id=0, bg=0)
 MOD_TIME.sleep(.1)
-firebase.put("Esp32_timer/temp", 17.6, id=0, bg=0)
+firebase.put("Esp32_timer/temp", 20, id=0, bg=0)
 
 #Put Tag2
 #firebase.put("lolval/testval", {"somenumbers": [1,2,3], "something": "lol","nothing": ("1","0","1")}, bg=0)
