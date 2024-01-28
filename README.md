@@ -1,4 +1,4 @@
-[徐國堂老師 Pico-W](https://github.com/roberthsu2003/pico_W)
+[徐國堂老師的資料 Pico-W](https://github.com/roberthsu2003/pico_W)
 ==================================================================
 
 上課錄影
