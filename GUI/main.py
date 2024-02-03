@@ -25,5 +25,6 @@ if response.status_code == 200:
     st.info(f'LED:{all_data["v0"]}')
     st.warning(f'可變電阻:{all_data["v1"]}')
     st.warning(f'光線:{all_data["v2"]}')
+    st.snow()
 else:
     st.write("連線失敗,請等一下再試")
