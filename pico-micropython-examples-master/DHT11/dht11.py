@@ -2,10 +2,10 @@
 
 from machine import Pin
 from time import sleep
-import dht 
+import dht
 
 #sensor = dht.DHT22(Pin(22))
-sensor = dht.DHT11(Pin(28))
+sensor = dht.DHT11(Pin(26))
 
 while True:
   try:

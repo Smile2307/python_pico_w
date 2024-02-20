@@ -5,7 +5,8 @@ from machine import Pin
 import rp2
 
 # Configure the number of WS2812 LEDs.
-NUM_LEDS = 12
+#NUM_LEDS = 12
+NUM_LEDS = 14
 
 
 @rp2.asm_pio(sideset_init=rp2.PIO.OUT_LOW, out_shiftdir=rp2.PIO.SHIFT_LEFT, autopull=True, pull_thresh=24)
@@ -24,7 +25,7 @@ def ws2812():
 
 
 # Create the StateMachine with the ws2812 program, outputting on Pin(22).
-sm = rp2.StateMachine(0, ws2812, freq=8_000_000, sideset_base=Pin(22))
+sm = rp2.StateMachine(0, ws2812, freq=8000000, sideset_base=Pin(22))
 
 # Start the StateMachine, it will wait for data on its FIFO.
 sm.active(1)
