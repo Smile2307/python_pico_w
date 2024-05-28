@@ -1,7 +1,7 @@
 from machine import Pin, ADC
 import utime
 
-sensor_temp = ADC(4)
+sensor_temp = ADC(28)
 conversion_factor = 3.3 / (65535)
 
 while True:

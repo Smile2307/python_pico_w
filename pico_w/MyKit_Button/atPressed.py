@@ -1,4 +1,4 @@
-config = {'btn':14, 'led':15}
+config = {'btn':14, 'led':0}
 
 import time
 from machine import Pin
